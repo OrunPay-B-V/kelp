@@ -46,5 +46,5 @@ func (s *APIServer) /*(t *delegatedSignSubmit)*/ signedCallback(w http.ResponseW
 	plugins.SubmitDelegatedTX(decodedXDR, decodedHorizonUrl)
 
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("Status: 200 OK"))
+// 	w.Write([]byte("Status: 200 OK"))
 }
