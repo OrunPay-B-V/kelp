@@ -8,7 +8,7 @@ export const interceptor = fetchIntercept.register({
     request: function (url, config) {
         // Modify the url or config here
         const withDefaults = Object.assign({}, config);
-        withDefaults.headers = config.headers || new Headers({
+        withDefaults.headers = new Headers({
         'AUTHORIZATION': `Bearer ${AccessToken}`
         });
     return [url, withDefaults]
